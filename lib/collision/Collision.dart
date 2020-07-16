@@ -5,8 +5,6 @@ import 'package:minesweep/collision/Polygon.dart';
 
 class Collision {
   static bool doesOverlap(Polygon r1, Polygon r2) {
-    //Helping thing
-
     var polys = [r1, r2];
     int poly1 = 0;
     int poly2 = 1;
@@ -68,11 +66,7 @@ class Collision {
   }
 
   static bool _orientation(Offset a, Offset b, Offset c) {
-    // See https://www.geeksforgeeks.org/orientation-3-ordered-points/
-    // for details of below formula.
     return (c.dy-a.dy) * (b.dx-a.dx) > (b.dy-a.dy) * (c.dx-a.dx);
-
-
   }
 
   static bool doesOverlap2(Polygon a, Polygon b) {
